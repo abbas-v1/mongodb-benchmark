@@ -2,11 +2,16 @@ package com.example;
 
 import java.io.Serializable;
 import java.util.Date;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document
 public class Reservation implements Serializable {
 
+    @Indexed
     private Long userId;
 
+    @Indexed
     private Long orderId;
     
     private String currency;
